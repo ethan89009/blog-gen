@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog Generator Upload</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom keyframe animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fadeInUp {
+      animation: fadeInUp 0.5s ease-out both;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-purple-500 to-indigo-600 min-h-screen flex items-center justify-center">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-md w-full animate-fadeInUp">
+    <h1 class="text-3xl font-extrabold text-gray-800 mb-6 text-center">Upload Files</h1>
+    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data" class="space-y-6">
+      <div>
+        <label for="promptFile" class="block text-gray-700 font-medium mb-2">Prompt Document (Markdown)</label>
+        <input type="file" id="promptFile" name="promptFile" accept=".txt,.md" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400 transition duration-150" />
+      </div>
+      <div>
+        <label for="topicsFile" class="block text-gray-700 font-medium mb-2">Topics Document (One topic per line)</label>
+        <input type="file" id="topicsFile" name="topicsFile" accept=".txt" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400 transition duration-150" />
+      </div>
+      <button type="submit" class="w-full py-3 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 transition duration-150 transform hover:-translate-y-1">
+        Upload &amp; Generate
+      </button>
+    </form>
+    <p class="mt-4 text-center text-sm text-gray-500">Your output file will be generated and saved in the outputs folder.</p>
+  </div>
+</body>
+</html>

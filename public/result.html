@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Output Generated</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fadeInUp {
+      animation: fadeInUp 0.5s ease-out both;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-indigo-500 to-purple-600 min-h-screen flex items-center justify-center">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-md w-full animate-fadeInUp">
+    <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Output Generated!</h1>
+    <p class="text-gray-700 text-center mb-4">Your output file has been successfully generated.</p>
+    
+    <!-- Results Card -->
+    <div class="bg-gray-100 p-6 rounded-md mb-6">
+      <div class="mb-4">
+        <span class="font-semibold text-gray-600">File Name:</span>
+        <span id="fileName" class="text-gray-800">Output_123456789.xlsx</span>
+      </div>
+      <div class="mb-4">
+        <span class="font-semibold text-gray-600">File Path:</span>
+        <span id="filePath" class="text-gray-800">outputs/Output_123456789.xlsx</span>
+      </div>
+      <div class="text-center">
+        <a id="downloadLink" href="outputs/Output_123456789.xlsx" class="text-blue-600 underline hover:text-blue-800 transition duration-150">
+          Download File
+        </a>
+      </div>
+    </div>
+    
+    <div class="flex justify-center">
+      <a href="/" class="px-6 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition duration-150 transform hover:-translate-y-1">
+        Upload Another File
+      </a>
+    </div>
+  </div>
+</body>
+</html>
