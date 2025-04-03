@@ -313,7 +313,7 @@ async function generateOutputFromUpload(req, res) {
                         <span id="fileName" class="text-gray-800">${title}.xlsx</span>
                     </div>
                     <div class="text-center">
-                        <a id="destinationLink" href="${fileUrl}" target="_blank" class="px-6 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-150 inline-block">
+                        <a id="destinationLink" href="https://drive.google.com/drive/folders/${process.env.GOOGLE_DRIVE_FOLDER_ID}" target="_blank" class="px-6 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-150 inline-block">
                             Go to Destination Folder
                         </a>
                     </div>
