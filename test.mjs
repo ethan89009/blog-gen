@@ -1,8 +1,11 @@
 import OpenAI from "openai";
+import dotenv from "dotenv";
+dotenv.config();
+
 
 const openai = new OpenAI({
     baseURL: 'https://openrouter.ai/api/v1',
-    apiKey: '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',
+    apiKey: process.env.OPENROUTER_API,
   });
 const models = ["google/gemma-3-27b-it:free","meta-llama/llama-4-maverick:free","openrouter/quasar-alpha","google/gemini-2.5-pro-exp-03-25:free","qwen/qwen2.5-vl-32b-instruct:free","google/gemini-2.0-pro-exp-02-05:free","google/gemini-2.0-flash-exp:free"]
 
